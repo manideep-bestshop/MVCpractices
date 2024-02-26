@@ -116,3 +116,34 @@ We can persist tempdata by calling the keep method.
 No, tempdata and session do not persist in server restarts.  
 
    
+Entity Framework:
+-----------------
+
+Entity Framework is an Object-Relational Mapping (ORM) framework used in ASP.NET (including ASP.NET Core) for data access. 
+It enables developers to work with databases using .NET objects and eliminates the need for most of the data-access code 
+that developers usually need to write.
+
+1.What is Entity Framework?
+A.Entity Framework is an Object-Relational Mapping (ORM) framework that enables developers to work with relational databases using 
+  .NET objects. It eliminates the need for most of the data-access code that developers usually need to write.
+  
+2.What are the key components of Entity Framework?
+A.DbContext: Represents a session with the database and allows querying and saving data.
+  DbSet: Represents a collection of entities of a specific type in the context.
+  Entity: Represents a class that maps to a database table. 
+
+3.What are the different approaches to configure Entity Framework in ASP.NET MVC Core?
+A.Code First: Define entity classes and relationships in code, and let Entity Framework generate the database schema.
+ Database First: Generate entity classes and DbContext from an existing database schema.
+ Model First: Design entity classes using a designer, and Entity Framework generates the database schema.  
+ 
+4.What is DbContext in Entity Framework Core?
+A. DbContext is the primary class that is responsible for interacting with the database in Entity Framework Core.
+   It represents a session with the database and allows querying and saving data. 
+   
+5.Explain how to perform database migrations in Entity Framework Core.?
+A. Database migrations are used to propagate changes made to the data model to the underlying database schema.
+   To perform migrations, developers use the dotnet ef migrations command-line tool or 
+  the Package Manager Console commands like Add-Migration and Update-Database.   
+  
+6.  
