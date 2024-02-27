@@ -1,0 +1,17 @@
+﻿@{
+    var tutorial = ViewBag.Tutorials;
+}
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    @foreach (var t in tutorial)
+    {
+        <tr>
+            <td>@t.Id</td>
+            <td>@t.Name</td>
+        </tr>
+    }
+</table>

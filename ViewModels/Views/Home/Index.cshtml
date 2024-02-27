@@ -1,0 +1,19 @@
+﻿@using ViewModels.ViewModels
+
+@model AnimalZooViewData
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>Animals</h2>
+
+@foreach(var animal in Model.Animals)
+{
+    <li>@animal.Name</li>
+}
+
+@foreach(var z in Model.Zoo)
+{
+    <li>@z.City</li>
+}

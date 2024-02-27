@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "Library\Library.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "MvcMovie\MvcMovie.csproj", "{644B0CBA-27C7-48F4-8190-A1D59AE1AA45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialViewExa", "PartialViewExa\PartialViewExa.csproj", "{EC9ADAF0-CE00-4ED5-BFEF-AEFD2E583BD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartialViewExa", "PartialViewExa\PartialViewExa.csproj", "{EC9ADAF0-CE00-4ED5-BFEF-AEFD2E583BD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{F0AB808A-D286-4FD4-B0FB-4FE5B5D3C89B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassingValuesToView", "PassingValuesToView\PassingValuesToView.csproj", "{D4EBA72D-E414-4A12-889A-4E44D6F3DB4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{EC9ADAF0-CE00-4ED5-BFEF-AEFD2E583BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC9ADAF0-CE00-4ED5-BFEF-AEFD2E583BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC9ADAF0-CE00-4ED5-BFEF-AEFD2E583BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0AB808A-D286-4FD4-B0FB-4FE5B5D3C89B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0AB808A-D286-4FD4-B0FB-4FE5B5D3C89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0AB808A-D286-4FD4-B0FB-4FE5B5D3C89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0AB808A-D286-4FD4-B0FB-4FE5B5D3C89B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4EBA72D-E414-4A12-889A-4E44D6F3DB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4EBA72D-E414-4A12-889A-4E44D6F3DB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4EBA72D-E414-4A12-889A-4E44D6F3DB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4EBA72D-E414-4A12-889A-4E44D6F3DB4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
