@@ -1,0 +1,12 @@
+﻿@model Address
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<partial name="_Address" model="model"></partial>
+
+@await Html.PartialAsync("_Address", model)
+
