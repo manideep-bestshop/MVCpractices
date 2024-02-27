@@ -146,4 +146,47 @@ A. Database migrations are used to propagate changes made to the data model to t
    To perform migrations, developers use the dotnet ef migrations command-line tool or 
   the Package Manager Console commands like Add-Migration and Update-Database.   
   
-6.  
+Partial View:
+-------------
+-The View which is portion(or part) of normal view is called "Partial View".
+-Partial view provides reusable content across different views within the web application.
+-Partial view extension towards razor is cshtml
+-Partial view should start with _(under score), it is not mandatory but recommended in real time 
+ to differentiate normal view.
+ 
+ ex. campus.cshtml
+     _head.cshtml
+	 
+-Partial view can be plced in two locations
+1.controller folder within views folder,Partial view available to controller views only
+(Private to the controller)
+2.shared folder within views folder , view will be available to all controller views
+ within application(Public to controllers)
+
+1.What is a partial view in ASP.NET MVC Core?
+A.The View which is portion(or part) of normal view is called "Partial View".
+  Partial view provides reusable content across different views within the web application.
+  
+2.How do you create a partial view in ASP.NET MVC Core?
+A.You can create a partial view by adding a new Razor View (.cshtml file) to the Views/Shared folder (or any other appropriate folder).
+ Partial views are typically prefixed with an underscore (_) in their file name to indicate that they are partial views. 
+
+3.How do you render a partial view within another view in ASP.NET MVC Core?
+A.You can render a partial view within another view using either Html.Partial or the partial tag helper.
+ For example: 
+ @await Html.PartialAsync("_PartialViewName", model)
+           (OR)
+ <partial name="_PartialViewName" for="model" />
+ 
+4.How do you pass data to a partial view in ASP.NET MVC Core?
+A.You can pass data to a partial view by specifying a model when rendering the partial view.
+  This allows the partial view to access and display data from that model 
+
+5.Can a partial view have its own layout in ASP.NET MVC Core?
+A.No, a partial view in ASP.NET MVC Core does not have its own layout. 
+  It inherits the layout of the parent view in which it is rendered.  
+
+6.What are the benefits of using partial views in ASP.NET MVC Core?
+A. Some benefits of using partial views include code reusability, modular design, and improved maintainability.
+  Partial views help break down complex UI into smaller, more manageable parts.  
+     
