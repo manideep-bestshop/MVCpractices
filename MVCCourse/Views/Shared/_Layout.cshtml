@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Supermarket Management</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    </head>
+    <body>
+        <header class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a href="/Home/Index">Supermarket</a>
+            </div>
+            <div>
+                <ul>
+                 <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="index">Home</a>
+                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-controller="categories" asp-action="index">Categories</a>
+                </li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <div>
+                @RenderSection("title")
+            </div>
+        @RenderBody()
+        </div>       
+        @await RenderSectionAsync("Scripts",required:false)
+    </body>
+</html>

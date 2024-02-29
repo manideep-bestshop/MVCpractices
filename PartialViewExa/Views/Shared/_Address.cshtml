@@ -1,10 +1,8 @@
 ﻿@model Address
 
 <div>
-@foreach(var details in Model)
-{
-
-    @details.Country
-
-}
+<label>Country:</label>
+<span>@Model.Country</span>
+<label>State:</label>
+<span>@Model.State</span>
 </div>

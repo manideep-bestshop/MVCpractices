@@ -6,14 +6,16 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h2>Animals</h2>
+<h4>Animals</h4>
 
-@foreach(var animal in Model.Animals)
+@foreach (var animal in Model.animals)
 {
     <li>@animal.Name</li>
 }
 
-@foreach(var z in Model.Zoo)
+<h4>Places</h4>
+
+@foreach (var z in Model.Zoos)
 {
     <li>@z.City</li>
 }
