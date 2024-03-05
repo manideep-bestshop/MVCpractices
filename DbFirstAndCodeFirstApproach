@@ -1,0 +1,33 @@
+-In the context of ASP.NET MVC Core and Entity Framework, there are a few different approaches to working with databases:
+
+1.Code-First Approach:
+ In the code-first approach, you define your domain model classes first, without worrying about the underlying database schema.
+You then use Entity Framework to generate the database schema based on your model classes.This approach is often preferred for its flexibility and ease of development.
+
+Classes-----------ado.net EF------------table [ex. dept,emp [Entity Framework] [dept,emp tables] classes]
+
+2.Database-First Approach:
+  In the database-first approach, you start with an existing database schema.You then use Entity Framework to generate the 
+corresponding model classes based on the database schema.This approach is useful when you already have an existing database schema or when working with databases designed by database administrators.
+
+tables----------------ado.net----------------classes [dept,emp tables] [Dept,Emp classes]
+
+3.Model-First Approach:
+  In the model-first approach, you design your domain model using a visual designer, such as Entity Framework Designer or Entity Data Model Designer.
+You then use Entity Framework to generate the database schema and the corresponding model classes based on your visual model. This approach can be useful when you prefer visual modeling tools for designing your domain model.
+
+.net is providing set of classes to work with ado.net entity framework
+DbSet class:
+DbSet is an inmemory[RAM/temporory memory] data storage of table ,this supports all the manipulations -DbSet methods:
+1.Add(entity/class object)-it will add record into dbset.
+2.Remove(entity)-it will remove record from dbset 
+3.Find(value)-it will search a record for records based on any column using any operator 
+4.where(condition)-it will search for records based on any colum using any operator.
+5.Skip(count)-it will skip count of records 6.take(count)-it will return count of records.
+
+DbContext class:
+-DbContext is a collection DbSets -DbContext is a bridge bwtween entities(classes) and db tables. -DbContext will perform all the manipulations with database -DbContext will perform following things
+
+1.Object materialization-it will convert db table records into entity objects(class objects) into dbset.
+2.tracking chages-it will maintain state to each object with in dbset(state-added/modified/deleted) 
+3.Persisting changes-it will apply dbset manipulations to db table.
