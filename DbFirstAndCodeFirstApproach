@@ -12,22 +12,30 @@ corresponding model classes based on the database schema.This approach is useful
 
 tables----------------ado.net----------------classes [dept,emp tables] [Dept,Emp classes]
 
-3.Model-First Approach:
-  In the model-first approach, you design your domain model using a visual designer, such as Entity Framework Designer or Entity Data Model Designer.
-You then use Entity Framework to generate the database schema and the corresponding model classes based on your visual model. This approach can be useful when you prefer visual modeling tools for designing your domain model.
+DbFirst Vs CodeFirst:
+---------------------
 
-.net is providing set of classes to work with ado.net entity framework
-DbSet class:
-DbSet is an inmemory[RAM/temporory memory] data storage of table ,this supports all the manipulations -DbSet methods:
-1.Add(entity/class object)-it will add record into dbset.
-2.Remove(entity)-it will remove record from dbset 
-3.Find(value)-it will search a record for records based on any column using any operator 
-4.where(condition)-it will search for records based on any colum using any operator.
-5.Skip(count)-it will skip count of records 6.take(count)-it will return count of records.
+Ease of Initial setup:
+---------------------
 
-DbContext class:
--DbContext is a collection DbSets -DbContext is a bridge bwtween entities(classes) and db tables. -DbContext will perform all the manipulations with database -DbContext will perform following things
+DbFirst: We can start quickly if we have already existed Database and tables
 
-1.Object materialization-it will convert db table records into entity objects(class objects) into dbset.
-2.tracking chages-it will maintain state to each object with in dbset(state-added/modified/deleted) 
-3.Persisting changes-it will apply dbset manipulations to db table.
+CodeFirst: need more setup , need to define domain model and Db Context from scratch
+
+When reccommended:
+----------------
+
+DbFirst: This approach is useful when you already have an existing database schema
+
+CodeFirst: when developer shuldhandle db tables from front end approach
+
+Control:
+-------
+
+DbFirst: Less control on Database schema,craeted externally
+
+CodeFirst: Control over Database schema, we can do easy modifications in database
+           we can easily apply data annotations.
+
+
+
