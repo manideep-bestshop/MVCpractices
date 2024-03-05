@@ -189,4 +189,68 @@ A.No, a partial view in ASP.NET MVC Core does not have its own layout.
 6.What are the benefits of using partial views in ASP.NET MVC Core?
 A. Some benefits of using partial views include code reusability, modular design, and improved maintainability.
   Partial views help break down complex UI into smaller, more manageable parts.  
+
+Entity Framework
+----------------
+-Entity Framework (EF) is an object-relational mapping (ORM) framework developed by Microsoft. It enables developers to work with databases using 
+ .NET objects and classes, eliminating the need for most of the data access code that developers usually need to write.
+-In the context of ASP.NET MVC Core, Entity Framework is commonly used as the data access layer to interact with a database. 
+ ASP.NET MVC Core is a web application framework built on top of the .NET Core platform. 
+ It follows the Model-View-Controller (MVC) architectural pattern, where Entity Framework can serve as the Model component, providing access to the data.   
+-In summary, Entity Framework in ASP.NET MVC Core provides a convenient way to interact with databases, abstracting away much of the complexity involved 
+ in data access, and allowing developers to focus more on the application logic and less on writing database-specific code. 
+
+-In the context of ASP.NET MVC Core and Entity Framework, there are a few different approaches to working with databases:
+
+1.Code-First Approach:
+----------------------
+     In the code-first approach, you define your domain model classes first, without worrying about the underlying database schema.
+You then use Entity Framework to generate the database schema based on your model classes.This approach is often preferred for 
+its flexibility and ease of development.
+
+Classes-----------ado.net EF------------table
+[ex. dept,emp   [Entity Framework]     [dept,emp tables]
+ classes]
+
+2.Database-First Approach:
+--------------------------
+      In the database-first approach, you start with an existing database schema.You then use Entity Framework to generate the 
+corresponding model classes based on the database schema.This approach is useful when you already have an existing database 
+schema or when working with databases designed by database administrators.
+
+tables----------------ado.net----------------classes
+[dept,emp tables]                             [Dept,Emp classes]
+
+
+3.Model-First Approach:
+-----------------------
+      In the model-first approach, you design your domain model using a visual designer, such as Entity Framework Designer or Entity Data Model Designer.
+You then use Entity Framework to generate the database schema and the corresponding model classes based on your visual model.
+This approach can be useful when you prefer visual modeling tools for designing your domain model.
+
+- .net is providing set of classes to work with ado.net entity framework
+
+DbSet class:
+------------
+- DbSet is an inmemory[RAM/temporory memory] data storage of table ,this supports all the manipulations
+-DbSet methods:
+
+1.Add(entity/class object)-it will add record into dbset.
+2.Remove(entity)-it will remove record from dbset
+3.Find(value)-it will search a record for records based on any column using any operator
+4.where(condition)-it will search for records based on any colum using any operator.
+5.Skip(count)-it will skip count of records
+6.take(count)-it will return count of records.
+
+DbContext class:
+----------------
+-DbContext is a collection DbSets
+-DbContext is a bridge bwtween entities(classes) and db tables.
+-DbContext will perform all the manipulations with database 
+-DbContext will perform following things
+
+1.Object materialization-it will convert db table records into entity objects(class objects) into dbset.
+2.tracking chages-it will maintain state to each object with in dbset(state-added/modified/deleted)
+3.Persisting changes-it will apply dbset manipulations to db table.
+
      
