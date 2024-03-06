@@ -2,7 +2,7 @@
 
 namespace CodeFirstApproach.Web.Models.Entities
 {
-    
+    [Keyless]
     public class Department
     {
         // primary key

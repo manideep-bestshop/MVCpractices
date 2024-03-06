@@ -41,13 +41,13 @@ namespace CodeFirstApproach.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            using (var context = new DbContext())
-            {
-                var students = context.Students();
-                // Process the retrieved Students
-            }
-            var students = await List<Student>DbContext.GetStudents();
-            return View(students);
+            //using (var context = new DbContext())
+            //{
+            //    var students = context.Students();
+            //    // Process the retrieved Students
+            //}
+          //  var students = await DbContext.Students.ToListAsync();
+           return View(DbContext.GetStudents());
         }
         [HttpGet]
         public async Task<IActionResult> Edit(Guid id)
