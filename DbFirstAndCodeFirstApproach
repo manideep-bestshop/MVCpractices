@@ -1,0 +1,41 @@
+-In the context of ASP.NET MVC Core and Entity Framework, there are a few different approaches to working with databases:
+
+1.Code-First Approach:
+ In the code-first approach, you define your domain model classes first, without worrying about the underlying database schema.
+You then use Entity Framework to generate the database schema based on your model classes.This approach is often preferred for its flexibility and ease of development.
+
+Classes-----------ado.net EF------------table [ex. dept,emp [Entity Framework] [dept,emp tables] classes]
+
+2.Database-First Approach:
+  In the database-first approach, you start with an existing database schema.You then use Entity Framework to generate the 
+corresponding model classes based on the database schema.This approach is useful when you already have an existing database schema or when working with databases designed by database administrators.
+
+tables----------------ado.net----------------classes [dept,emp tables] [Dept,Emp classes]
+
+DbFirst Vs CodeFirst:
+---------------------
+
+Ease of Initial setup:
+---------------------
+
+DbFirst: We can start quickly if we have already existed Database and tables
+
+CodeFirst: need more setup , need to define domain model and Db Context from scratch
+
+When reccommended:
+----------------
+
+DbFirst: This approach is useful when you already have an existing database schema
+
+CodeFirst: when developer shuldhandle db tables from front end approach
+
+Control:
+-------
+
+DbFirst: Less control on Database schema,craeted externally
+
+CodeFirst: Control over Database schema, we can do easy modifications in database
+           we can easily apply data annotations.
+
+
+
