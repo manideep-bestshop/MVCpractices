@@ -3,6 +3,7 @@ using CodeFirstApproach.Web.Models;
 using CodeFirstApproach.Web.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace CodeFirstApproach.Web.Controllers
 {
@@ -40,7 +41,12 @@ namespace CodeFirstApproach.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            var students = await DbContext.Students.ToListAsync();
+            using (var context = new DbContext())
+            {
+                var students = context.Students();
+                // Process the retrieved Students
+            }
+            var students = await List<Student>DbContext.GetStudents();
             return View(students);
         }
         [HttpGet]

@@ -11,5 +11,12 @@ namespace CodeFirstApproach.Web.Data
         }
         public DbSet<Student> Students { get; set; }
 
+        // Define a method to execute the stored procedure
+        public IList<Student> GetStudents()
+        {
+            return this.Students.FromSqlRaw("EXECUTE GetStudents").ToList();
+        }
+        public DbSet<Department> Departments { get; set; }
+
     }
 }
